@@ -18,7 +18,7 @@
 
 Name:           %{?scl_prefix}rubygem-%{gem_name}
 Summary:        Common API for connecting web frameworks, web servers and layers of software
-Version:        2.0.1
+Version:        2.2.2
 Release:        %{release_prefix}%{?dist}.cpanel
 Group:          Development/Languages
 # lib/rack/backports/uri/* are taken from Ruby which is (Ruby or BSD)
@@ -78,14 +78,14 @@ rm -rf %{buildroot}
 %files
 %dir %{gem_instdir}
 %doc %{gem_docdir}
-%doc %{gem_instdir}/COPYING
+%doc %{gem_instdir}/CHANGELOG.md
 %doc %{gem_instdir}/Rakefile
 %doc %{gem_instdir}/README.rdoc
-%doc %{gem_instdir}/HISTORY.md
-%doc %{gem_instdir}/SPEC
+%doc %{gem_instdir}/SPEC.rdoc
 %doc %{gem_instdir}/example
-%doc %{gem_instdir}/test
+%doc %{gem_instdir}/MIT-LICENSE
 %doc %{gem_instdir}/contrib
+%doc %{gem_instdir}/CONTRIBUTING.md
 %{gem_instdir}/%{gem_name}.gemspec
 %{gem_libdir}
 %{gem_instdir}/bin
@@ -94,5 +94,8 @@ rm -rf %{buildroot}
 %{gem_spec}
 
 %changelog
+* Thu Apr 16 2020 Cory McIntire <cory@cpanel.net> - 2.2.2-1
+- EA-9011: Update scl-ruby24-rubygem-rack from v2.0.1 to v2.2.2
+
 * Mon Apr 17 2017 Rishwanth Yeddula <rish@cpanel.net> 2.0.1-1
 - initial packaging
