@@ -14,7 +14,7 @@
 %{?scl:%scl_package rubygem-%{gem_name}}
 
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4590 for more details
-%define release_prefix 1
+%define release_prefix 2
 
 Name:           %{?scl_prefix}rubygem-%{gem_name}
 Summary:        Common API for connecting web frameworks, web servers and layers of software
@@ -94,6 +94,9 @@ rm -rf %{buildroot}
 %{gem_spec}
 
 %changelog
+* Tue Dec 28 2021 Dan Muey <dan@cpanel.net> - 2.2.3-2
+- ZC-9589: Update DISABLE_BUILD to match OBS
+
 * Tue Jun 16 2020 Cory McIntire <cory@cpanel.net> - 2.2.3-1
 - EA-9120: Update scl-ruby24-rubygem-rack from v2.2.2 to v2.2.3
 
